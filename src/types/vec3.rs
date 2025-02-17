@@ -151,11 +151,11 @@ impl Display for Vec3 {
     }
 }
 
-fn dot(l: Vec3, r: Vec3) -> f64 {
+pub fn dot(l: Vec3, r: Vec3) -> f64 {
     l.e[0] * r.e[0] + l.e[1] * r.e[1] + l.e[2] * r.e[2]
 }
 
-fn cross(l: Vec3, r: Vec3) -> Vec3 {
+pub fn cross(l: Vec3, r: Vec3) -> Vec3 {
     Vec3::new(
         l.e[1] * r.e[2] - l.e[2] * r.e[1],
         l.e[2] * r.e[0] - l.e[0] * r.e[2],
@@ -163,6 +163,6 @@ fn cross(l: Vec3, r: Vec3) -> Vec3 {
     )
 }
 
-fn unit_vector(v: Vec3) -> Vec3 {
+pub fn unit_vector(v: Vec3) -> Vec3 {
     v / v.length()
 }
